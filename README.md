@@ -43,6 +43,6 @@ upload.addEventListener('click', function () {
 ```
 
 # Examples
-<img src="https://vmllab-js.github.io/inputImage/imgs/qrcode.png" width="auto">
+<img src="https://vmllab-js.github.io/inputImage/imgs/qrcode.png" width="50%">
 
 https://vmllab-js.github.io/inputImage
