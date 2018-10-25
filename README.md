@@ -6,7 +6,7 @@
 - 可自定义尺寸等比例缩放图片，用于缩略图或者压缩上传图片
 
 # Quick Start
-```
+```html
 <button id="upload">上传图片</button>
 <script src='exif.js'></script>
 <script src='inputImage.js'></script>
