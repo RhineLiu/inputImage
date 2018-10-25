@@ -7,15 +7,20 @@
 
 # Quick Start
 ```html
-<button id="upload">上传图片</button>
+<button id="upload">Upload Image</button>
+<img id="preview_image">
+<img id="resize_image">
+<img id="adjust_image">
 <script src='exif.js'></script>
 <script src='inputImage.js'></script>
 <script>
 upload.addEventListener('click', function () {
 	inputImage.input({
+		camera: true, // use camera
+		multiple: false, // take only one photo
 		format: 'image',
 		success: function (files) {
-			preview_image.src = files[0].src;
+			original_image.src = files[0].src;
 			// 尺寸不变的图片,可以用来绘制
 			inputImage.adjust({
 				image: files[0],
@@ -23,10 +28,10 @@ upload.addEventListener('click', function () {
 					adjust_image.src = base64;
 				}
 			});
-			// 尺寸变小的图片,可以用来检测脸
+			// 尺寸变小的图片，可以用来做缩略图或压缩图片
 			inputImage.resize({
 				image: files[0],
-				min: 480,
+				max: 120,
 				success: function (base64) {
 					resize_image.src = base64;
 				}
